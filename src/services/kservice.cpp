@@ -247,8 +247,8 @@ void KServicePrivate::save(QDataStream &s)
     // You may add new fields at the end. Make sure to update KSYCOCA_VERSION
     // number in ksycoca.cpp
     s << m_strType << m_strName << m_strExec << m_strIcon << term << m_strTerminalOptions << m_strWorkingDirectory << m_strComment
-      << false /* unused */ << m_mapProps << QString() /* unused */ << dst << m_strDesktopEntryName << m_lstKeywords << m_strGenName << categories << menuId
-      << m_actions << QStringList() /* unused */ << m_untranslatedName << m_untranslatedGenericName << m_mimeTypes;
+      << qint8(false) /* unused */ << m_mapProps << QString() /* unused */ << dst << m_strDesktopEntryName << m_lstKeywords << m_strGenName << categories
+      << menuId << m_actions << QStringList() /* unused */ << m_untranslatedName << m_untranslatedGenericName << m_mimeTypes;
 }
 
 ////
